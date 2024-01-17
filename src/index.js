@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("My API")
+})
+
 app.use("/api", workoutsRoutes)
 app.use("/user", userRouter)
 
