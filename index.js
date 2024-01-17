@@ -15,7 +15,7 @@ app.use("/api", workoutsRoutes)
 app.use("/user", userRouter)
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 4000
 
 // API
 mongoose.connect(process.env.MONG_URL).then(() => {
